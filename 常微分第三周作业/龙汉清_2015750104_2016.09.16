@@ -1,0 +1,420 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# The homework of ODE"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Solve the following differential equations"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (1) $\\frac{\\mathrm d y}{\\mathrm d x} - \\frac{n}{x}y = e^xx^n$(the n is a constant)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "apparently, the function y is not equal to 0"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "first, solve this equation\n",
+    "$$\\frac{\\mathrm d y}{\\mathrm d x} = \\frac{n}{x}y$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "we can easily get:\n",
+    "$$y = cx^n$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "then we let:\n",
+    "$$y = c(x)x^n$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "take the above equation to the question\n",
+    "$$c'(x)x^n = e^xx^n$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "so\n",
+    "$$c(x) = e^x + c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "the answer is:\n",
+    "$$y = x^n(e^n + c)$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (2) $\\frac{\\mathrm d y}{\\mathrm d x} = \\frac{1}{xy + x^3y^3}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "first, the above equation is always equal to\n",
+    "$$\\frac{\\mathrm d y^2}{\\mathrm d x^2} = \\frac{1}{x^2 + x^4y^2}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\\begin{align}\n",
+    "\\frac{\\mathrm d x^2}{\\mathrm d y^2} &= x^2 + x^4y^2\\\\\n",
+    "\\frac{\\mathrm d x^{-2}}{\\mathrm d y^2} &= -x^{-2} - y^2\n",
+    "\\end{align}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "second, we solve this equation\n",
+    "$$\\frac{\\mathrm d x^{-2}}{\\mathrm d y^2} = -x^{-2}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "so \n",
+    "$$x^{-2} = \\frac{c}{e^{y^2}}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "let $\\quad x^{-2} = \\frac{c(y^2)}{e^{y^2}} \\quad$ and take it to the thrid equation"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$c(y^2) = -y^2e^{y^2} + e^{y^2} + c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "the answer\n",
+    "$$e^{y^2} = x^{-2}(-y^2e^{y^2} + e^{y^2} + c)$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (3) $y = e^x + \\int_0^x y(t) \\mathrm d t$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$y' = e^x + y$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "so\n",
+    "$$\\frac{\\mathrm d y}{\\mathrm d x} = y + e^x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "solve this equation\n",
+    "$$\\frac{\\mathrm d y}{\\mathrm d x} = y$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$y = ce^x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "let $\\quad y = c(x)e^x \\quad$ we can get\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$c(x) = x + c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$y = (x + c)e^x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "let $\\quad x = 0 \\quad$ then $\\quad y = e \\quad$ so $\\quad c = 1 \\quad$ "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "the answer \n",
+    "$$y = (x + 1)e^x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (4) $y'\\sin x \\cdot \\cos x - y - \\sin^3 x = 0$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**case 1:** $\\quad x = k\\pi \\quad (k = 1, 2, \\cdots)$\n",
+    "$$y = 0$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**case 2:** $\\quad x = \\frac{\\pi}{2} + k\\pi \\quad (k = 1, 2, \\cdots)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$y = (-1)^{k+1}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**case 3:** $\\quad x \\neq \\frac{k\\pi}{2} \\quad (k = 1,2,\\cdots)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\\frac{\\mathrm d y}{\\mathrm d x} = \\frac{y}{\\sin x \\cdot \\cos x} + \\frac{1}{\\cos x} - \\cos x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "first, we solve this equation\n",
+    "$$\\frac{\\mathrm d y}{\\mathrm d x} = \\frac{y}{\\sin x \\cdot \\cos x}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$y = c\\tan x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "let $\\quad y = c(x)\\tan x \\quad$then"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$c(x) = -\\cos x + c$$\n",
+    "so\n",
+    "$$y = (-\\cos x + c)\\tan x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Verify that the following equation is exact equation, and solve it"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "###  $\\left(\\frac{1}{y}\\sin \\frac{x}{y} - \\frac{y}{x^2}\\cos \\frac{y}{x} + 1\\right)\\mathrm d x + \\left(\\frac{1}{x}\\cos \\frac{y}{x} - \\frac{x}{y^2}\\sin \\frac{x}{y} + \\frac{1}{y^2}\\right)\\mathrm d y = 0$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "first: verify\n",
+    "$$\\begin{align}\n",
+    "\\frac{\\mathrm d \\left(\\frac{1}{y}\\sin \\frac{x}{y} - \\frac{y}{x^2}\\cos \\frac{y}{x} + 1\\right)}{\\mathrm d y} &= -\\frac{1}{y^2}\\sin \\frac{x}{y} - \\frac{x}{y^3}\\cos \\frac{x}{y} - \\frac{1}{x^2}\\cos \\frac{y}{x} + \\frac{y}{x^3}\\sin \\frac{y}{x}\\\\\n",
+    "\\frac{\\mathrm d \\left(\\frac{1}{x}\\cos \\frac{y}{x} - \\frac{x}{y^2}\\sin \\frac{x}{y} + \\frac{1}{y^2}\\right)}{\\mathrm d x} &= -\\frac{1}{y^2}\\sin \\frac{x}{y} - \\frac{x}{y^3}\\cos \\frac{x}{y} - \\frac{1}{x^2}\\cos \\frac{y}{x} + \\frac{y}{x^3}\\sin \\frac{y}{x}\n",
+    "\\end{align}$$\n",
+    "so\n",
+    "$$\\frac{\\mathrm d \\left(\\frac{1}{y}\\sin \\frac{x}{y} - \\frac{y}{x^2}\\cos \\frac{y}{x} + 1\\right)}{\\mathrm d y} = \\frac{\\mathrm d \\left(\\frac{1}{x}\\cos \\frac{y}{x} - \\frac{x}{y^2}\\sin \\frac{x}{y} + \\frac{1}{y^2}\\right)}{\\mathrm d x}$$\n",
+    "the above equation is an exact equation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "second: solve  \n",
+    "we can use the formula to calculate the answer\n",
+    "$$\\sin \\frac{y}{x} - \\cos {x}{y} + x - \\frac{1}{y} = c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. Solve the following differential equations"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (1) $(y\\cos x - x\\sin x)\\mathrm d x + (y\\sin x + x\\cos x)\\mathrm d y = 0$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$M = y\\cos x - x\\sin x,\\quad N = y\\sin x + x\\cos x$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\\frac{\\partial M}{\\partial y} \\neq \\frac{\\partial N}{\\partial x},\\quad \\frac{\\frac{\\partial M}{\\partial y} - \\frac{\\partial N}{\\partial x}}{-M} = 1$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "so, this equation have a integrating factor\n",
+    "$$e^y$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "use the formula to calculate the answer\n",
+    "$$e^y\\sin x(y - 1) + e^y\\cos x = c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### (2) $x(4y\\mathrm d x + 2x\\mathrm d y)+ y^3(3y\\mathrm d x + 5x\\mathrm d y) = 0$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "both sides of the equation are multiplied by $x^2y$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\\mathrm d (x^4y^2) + \\mathrm d (x^3y^5) = 0$$\n",
+    "so the solution is \n",
+    "$$x^4y^2 + x^3y^5 = c$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "SageMath 7.2",
+   "language": "",
+   "name": "sagemath"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
