@@ -1,0 +1,126 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "3.求下列方程的通解："
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "（1）$t^2x\"+tx'-x=0$;\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " (2)$t^2x''-4tx'+6x=t$；\n",
+    " \n",
+    " \n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "  解：(1)  设$x=t^k代入方程，得到关于k的方程$$k(k-1)+k-1=0 即k^2-1=0,$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$ 因此 k_1=1,k_2=-1,从而方程的通解为  x=c_1t+c_2\\frac{1}{t}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "解：(2) 先求方程$t^2x''-4tx'+6x=0$的通解，设$x=t^k代入方程则得到关于 k的代数方程 k(k-1)-4k+6=0  即(k-2)(k-3)=0, 因此k_1=2,k_2=3, 故方程k(k-1)-4k+6=0的通解为  x=c_1t^2+c_2t^3.$\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " 故利用常数变易法，求已知方程形如$x_1=c_1(t)*t^2+c_2(t)*t^3 的一个特解，可得关于c'_1(t),c'_2(t)  的方程组$\n",
+    "    $$\n",
+    "    \\begin{cases}\n",
+    "    t^2c'_1(t)+t^3c'_2(t)=0,\\\\\n",
+    "    2tc'_1(t)+3t^2c'_2(t)=\\frac{1}{t},\n",
+    "    \\end{cases}\n",
+    "    $$\n",
+    "    \n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " 解之得： \n",
+    "    $$\n",
+    "    \\begin{cases}\n",
+    "    c'_1(t)=-\\frac{1}{t^2},\\\\\n",
+    "    c'_2(t)=\\frac{1}{t^3},\n",
+    "    \\end{cases}\n",
+    "    $$\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "积分得 $c_1(t)=\\frac{1}{t}+c_1,c_2(t)=-\\frac{1}{2t^2}+c_2,\\\\ 故方程的通解为  x=c_1t^2+c_2t^3+\\frac{1}{2}t$\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2 (SageMath)",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
